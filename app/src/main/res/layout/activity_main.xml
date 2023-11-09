@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/charcoal"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txttitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/gugi"
+        android:text="Jo Ken Po"
+        android:textColor="@color/white"
+        android:textSize="60px"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/gugi"
+        android:text="Ganhador:"
+        android:textColor="@color/white"
+        android:textSize="50px"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pedra"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtPlacar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/gugi"
+        android:onClick="atualizarPlacar"
+        android:text="Placar"
+        android:textColor="@color/white"
+        android:textSize="50px"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/pedra"
+        android:layout_width="82dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#3F51B5"
+        android:onClick="selecionadoPedra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJogador"
+        app:srcCompat="@drawable/pedra"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/tesoura"
+        android:layout_width="82dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="#F44336"
+        android:onClick="selecionadoTesoura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJogador"
+        app:srcCompat="@drawable/tesoura"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/papel"
+        android:layout_width="82dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#FFEB3B"
+        android:onClick="selecionadoPapel"
+        app:layout_constraintEnd_toStartOf="@+id/tesoura"
+        app:layout_constraintStart_toEndOf="@+id/pedra"
+        app:layout_constraintTop_toBottomOf="@+id/txtJogador"
+        app:srcCompat="@drawable/papel"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imgApp"
+        android:layout_width="97dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdversario"
+        app:srcCompat="@drawable/padrao"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtAdversario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/gugi"
+        android:text="Jogada do Adversário"
+        android:textColor="@color/white"
+        android:textSize="50px"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txttitulo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtJogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/gugi"
+        android:text="Sua Jogada"
+        android:textColor="@color/white"
+        android:textSize="50px"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgApp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/black"
+        android:onClick="reiniciarJogo"
+        android:text="Reiniciar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPlacar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
